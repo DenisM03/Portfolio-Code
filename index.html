@@ -1,0 +1,2808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denis M Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        /* Home Section Styling */
+        .home-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 160px 120px;
+            background-color: #f9f9f9;
+        }
+
+        /* Container for Image and Text */
+        .home-content {
+            display: flex;
+            align-items: center;
+            max-width: 700px;
+            gap: 80px;
+            width: 100%;
+        }
+
+        /* Profile Image */
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-img {
+            width: 500px;
+            height: 500px;
+            border-radius: 100%;
+            object-fit: cover;
+            border: 5px solid #ccc;
+            margin: 20px 0;
+        }
+
+        /* Text Content */
+        .text-container {
+          font-size: 2rem;
+            flex: 2;
+            text-align: left;
+        }
+
+
+        .text-container h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /*Styling for "Hello, I'm" */
+        .text-left h5 {
+            font-size: 1.8rem; 
+            color: black;
+            font-weight: bold;
+        }
+        
+        /* Styling for Name  with Higher Specificity */
+        .text-container .card-title {
+            font-size: 3rem; /* Larger font for emphasis */
+            color: black; /* Darker blue/gray shade */
+            font-weight: bold;
+            margin: 5px 0;
+            font-weight: 700; /* Bold weight */
+            font-family: 'Roboto Slab', serif; /* Elegant font for the name */
+        }
+
+        /* Styling for Role */
+        .card-body h5 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #5a4949;
+            margin: 35px 0;
+            margin-bottom: 20px;
+        }
+
+        /* Social Media Icons */
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #bdc8d3; /* Adjust as needed */
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: #b49c60;
+        }
+
+        .social-icons img {
+            width: 25px;
+            height: 25px;
+        }
+
+        /* Resume Download Box */
+
+        .resume-container h5 {
+          font-weight: bold;
+          background-color: white;
+          display: inline-block;
+          white-space: nowrap;
+          color: black;
+          margin-bottom: 10px;
+        }
+
+        .resume-container .btn {
+          font-size: 1rem;
+          font-weight: 500;
+          color: white;
+          background-color: black;
+          border-radius: 20px;
+          display: inline-block;
+          white-space: nowrap;
+        }
+
+
+        .resume-container .btn:hover {
+          font-size: 1rem;
+          font-weight: 500;
+          color: black;
+          background-color: white;
+          border-radius: 20px;
+        }
+
+
+        /* About Section Styling */
+        /* Custom CSS for image styling */
+        .about-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 75%;
+            object-fit: cover;
+            border: 5px solid #ccc; /* Border around the image */
+        }
+        .about-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 200px 160px;
+        }
+        .about-text {
+            text-align: left;
+            max-width: 1200px;
+            margin: 20px auto;
+            font-size: 1.1rem;
+        }
+
+        /****** About Section Styling ******/
+        .about-section {
+            font-size: 2.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 120px 80px;
+        }
+
+        /* Styling for Education Container */
+        .education-container {
+            width: 100%;
+            max-width: 500px;
+            background-color: #000; /* Black background color */
+            color: white; /* White text color by default */
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+            text-align: left; /* Align text to the left */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+        }
+
+        /* Hover effect */
+        .education-container:hover {
+            background-color: #fff; /* White background on hover */
+            color: #000; /* Black text on hover */
+        }
+
+
+        /* Title and Details Styling */
+        .education-title {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #e9a609;
+            margin-bottom: 15px;
+        }
+
+        .course-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 10px 0 5px;
+            color: #ab8f8f;
+        }
+
+        .university-name {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 5px 0;
+            color: #777;
+        }
+
+        .course-year {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #A0A0A0;
+            font-style: normal;
+            margin-top: 10px;
+        }
+
+
+        /* Sticky Navbar Styling */
+
+        /* Sticky Navbar */
+        .navbar {
+          position: sticky;
+          top: 0;
+          z-index: 1000;
+          background-color: #ffffff !important; /* White background */
+          min-height: 80px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        /* Smooth scroll */
+        html {
+          scroll-behavior: smooth;
+        }
+
+        /* Style for the navbar links */
+        .nav-link {
+          color: #000 !important; /* Black color for links */
+          font-weight: bold;
+          margin-right: 30px;
+          transition: color 0.3s ease;
+          font-size: 1.3rem;
+        }
+
+        .nav-link:hover {
+          color: #0c98f0 !important; /* Retain hover color */
+          font-weight: bold;
+        }
+
+        /* Style for the navbar-brand */
+        .navbar-brand {
+          color: #000 !important; /* Ensure consistent color */
+          font-size: 1.5rem;
+          font-weight: bold;
+          transition: color 0.3s ease;
+        }
+
+        .navbar-brand:hover,
+        .navbar-brand:focus {
+          color: #000 !important; /* Hover/focus effect for the brand */
+          text-decoration: none; /* Remove underline or focus outline */
+        }
+
+        /* Prevent disappearing text during click */
+        .navbar-brand:active {
+          color: #000 !important;
+          text-decoration: none;
+        }
+
+
+
+        /* Adjust section padding to make space for sticky navbar */
+        section {
+        padding-top: 60px;
+        }
+        
+        
+        /* Skill Section Styling */
+        /* Skills Section */
+        .skills-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+            padding: 240px 160px;            
+        }
+
+        .skills-section h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: black;
+        }
+
+        /* Skill Card Styling */
+        .skill-card {
+            background-color: #fff;
+            border: 1px solid black;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+            min-width: 90%;
+        }
+
+        .skill-card:hover {
+            background-color: #576575;
+            transform: translateY(-5px);
+        }
+
+
+        /* Skill Title */
+        .skill-title {
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+
+        /* Project Card Styling */        
+        /* Project Section */
+        #projects {
+          padding: 40px 0;
+          background-color: #f8f9fa; /* Light background */     
+        }
+
+        #projects h2 {
+          text-align: center;
+          font-size: 2rem;
+          margin-bottom: 30px;
+          font-weight: bold;
+          padding: 40px 10px;           
+        }
+
+        .project-card {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease-in-out;
+          border-radius: 25px;
+        }
+
+        .project-card:hover {
+          transform: translateY(-10px);
+          border-radius: 25px;
+        }
+
+        .project-card img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 25px;
+        }
+
+        .project-card-body {
+          padding: 20px;
+          background-color: black;
+          border-radius: 25px;
+        }
+
+        .project-card-body h5 {
+          font-size: 1.25rem;
+          font-weight: bold;
+          color: #333;
+          margin-bottom: 10px;
+        }
+
+        .project-card-body p {
+          font-size: 1rem;
+          color: #666;
+          border-radius: 25px;
+        }
+
+        .project-card-body .btn {
+          margin-top: 10px;
+          width: 100%;
+          border-radius: 25px;
+          padding: 12px;
+          font-size: 0.9rem;
+        }
+
+        .project-card-body .btn-primary {
+          background-color: #007bff;
+          border: black;
+        }
+
+        .project-card-body .btn-primary:hover {
+          background-color: #0056b3;
+        }
+
+        .project-card-body .btn-secondary {
+          background-color: #28a745;
+          border: none;
+        }
+
+        .project-card-body .btn-secondary:hover {
+          background-color: #218838;
+        }
+
+        @media (max-width: 768px) {
+          .project-card {
+            margin-bottom: 20px;
+          }
+        }
+
+    
+        /* Custom Project Card Title */
+        .card-body .card-title {
+          font-size: 1.2rem; /* Larger font size */
+          font-weight: 500;   /* Bold font weight */
+          color: black;       /* Dark color for better contrast */
+          text-align: center; /* Center-aligned title */
+        }
+
+        /* Custom Project Card Text (Domain) */
+        .card-body .card-text  {
+          font-size: 1rem;    /* Standard font size */
+          color: #510de3;        /* Lighter color */
+          line-height: 1;   /* Improve readability */
+          text-align: center; /* Center-aligned text */
+        }
+
+      
+        /* Styling for the 'View Project' button in the card footer */
+        .card-footer {
+        display: flex; /* Use flexbox for alignment */
+        justify-content: flex-start; /* Align content to the left */
+        align-items: center; /* Center-align items vertically */
+        gap: 10px; /* Space between button and icons */
+        background-color: transparent; /* Remove any background */
+        border-top: none; /* Remove border */
+        padding-top: 5px;
+      }
+
+      .card-footer .btn {
+        width: 40%; /* Set button width */
+        background-color: rgb(228, 225, 219); /* Button color */
+        border-top: 1px solid black;
+        color: black;
+        font-weight: bold;
+        font-size: 1rem;
+        border: 1px solid black;
+        padding: 10px 20px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+      }
+
+      
+
+
+
+
+      .card-footer .btn:hover {
+        background-color: #f0a504;
+        color: black;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-footer .tool-icon {
+        display: inline-block; /* Keep icons inline */
+        width: 24px; /* Set icon size */
+        height: 24px;
+      }
+
+      .card-footer .tool-icons {
+        display: flex;
+        align-items: center;
+        gap: 8px; /* Space between icons and plus signs */
+      }
+
+      .card-footer .tool-icon {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .card-footer .tool-icon:not(:last-child)::after {
+        content: "+";
+        font-size: 1.5rem; /* Adjust as needed */
+        color: #333; /* Adjust color as needed */
+        margin-left: 8px; /* Adjust spacing as needed */
+      }
+
+      /* Style for "Domain" label */
+      .domain-label {
+        color: #007bff; /* Example: blue color for "Domain" label */
+      }
+
+      /* Style for "Domain name" */
+      .domain-value {
+        color: #28a745; /* Example: green color for "Domain name" value */
+      }
+
+
+
+      /* Card footer layout */
+      .card-footer {
+        display: flex;
+        justify-content: space-between; /* Spaces out button and icon container */
+        align-items: center;
+      }
+
+      /* Tool icons container styling */
+      .tool-icons {
+        display: flex;
+        align-items: center;
+        gap: 4px; /* Adjust spacing between icon and "+" sign */
+      }
+
+      /* Styling for "+" separator */
+      .icon-separator {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+        padding: 0 3px; /* Adjust padding around "+" for better spacing */
+      }
+
+
+
+      /* Basic Button Styling */
+
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        color: black;
+        width: 50px; /* Adjust icon size */
+        height: 50px;
+        filter: invert(3); /* Ensure white icon visibility */
+      }
+
+        
+        /* Fullscreen modal adjustments */
+        .modal-dialog.modal-fullscreen {
+          max-width: 100%; /* Ensure the modal dialog is 100% width */
+          margin: 0; /* Remove margin */
+          height: 100vh; /* Make sure it takes full height of the viewport */
+        }
+
+        .modal-body {
+          height: calc(100vh - 60px); /* Subtract header/footer height */
+          overflow-y: auto; /* Allows scrolling if content overflows */
+        }
+
+
+        .modal-header {
+          background-color: #f1f1f1; /* Light gray background */
+          border-bottom: 2px solid #ddd;
+          padding: 20px; /* Ensure padding doesn't shrink the header */
+        }
+
+        .modal-footer {
+          border-top: 2px solid #ddd;
+          background-color: #f1f1f1;
+          padding: 20px; /* Ensure footer padding is correct */
+        }
+
+        .modal-content {
+          border-radius: 0 !important; /* Remove rounded corners for fullscreen */
+          height: 100%;
+        }
+
+
+
+        /* Optional: Adjust button styles */
+        .modal-footer .btn {
+          border-radius: 20px;
+        }
+
+        /* Modal title styling */
+        .modal-title {
+          font-size: 2rem;          /* Adjust title size */
+          font-weight: bold;           /* Make title bold */
+          color: #2c3e50;              /* Custom color (e.g., dark blue-gray) */
+          text-align: center;          /* Center the title */
+          width: 100%;                 /* Make the title occupy full width */
+          border-bottom: 2px solid #3498db;  /* Optional bottom border */
+          padding-bottom: 10px;        /* Add space below the title */
+        }
+
+        /* Optional styling to add padding to the modal header for spacing */
+        .modal-header {
+          padding: 20px;               /* Adjust as needed for spacing */
+        }
+
+        /* Custom button styling for modal view */
+        .modal .btn-custom {
+          font-size: 1.5rem;               /* Adjust font size */
+          font-weight: bold;             /* Make button text bold */
+          color: #0a0202;                /* Set text color to white */
+          background-color: #2dba4e;     /* Primary color */
+          border: black;                  /* Remove default border */
+          border-radius: 30px;            /* Rounded corners */
+          padding: 10px 20px;            /* Button padding */
+          transition: background-color 0.3s ease; /* Smooth transition on hover */
+          margin: 0 5px;                 /* Space between buttons */
+        }
+
+        .modal .btn-custom:hover {
+          color: white;
+          background-color: black;     /* Darker shade on hover */
+        }
+
+        .modal .btn-custom-info {
+          background-color: #ED6C47;     /* Custom color for PPT button */
+        }
+
+        .modal .btn-custom-secondary {
+          background-color:  #FFA500;     /* Custom color for SQL Code button */
+        }
+
+        .modal .btn-custom-secondary2 {
+          background-color: #06e9ca;     /* Custom color for SQL Code button */
+        }        
+
+        /* Styling for "Project Details" header */
+        .modal .col-md-6 h6 {
+          font-size: 1.5rem;                /* Larger font size for prominence */
+          font-weight: bold;                /* Bold text for emphasis */
+          text-align: center;
+          color: #34495e;                   /* Dark color for readability */
+          border-bottom: 2px solid black; /* Bottom border for visual separation */
+          padding-bottom: 10px;             /* Space below the header */
+          margin-bottom: 15px;              /* Margin below for spacing */
+        }
+
+
+
+        /* Additional styling specifically for the "Live Dashboard" header */
+        .modal .mt-4 {
+          font-size: 2rem;                /* Larger font size for prominence */
+          font-weight: bold;                /* Bold text for emphasis */
+          text-align: center;
+          color: black;                   /* Dark color for readability */
+          border-bottom: 2px solid black; /* Bottom border for visual separation */
+                    padding-bottom: 10px;             /* Space below the header */
+          margin-bottom: 15px;              /* Margin below for spacing */
+        }
+
+      /* Unique Styling for Project Insights Section */
+      .project-insights-container {
+        padding: 20px;
+        background-color: white; /* Light blue background for distinction */
+        border-left: 5px solid #007bff; /* Highlight border for the section */
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      }
+
+      /* Title Styling: Project Insights */
+      .project-insights-container h6.project-insights-title {
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: center;
+        font-family: 'Roboto Slab', serif;
+        color: #0056b3; /* Darker blue for emphasis */
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px; /* Slightly spaced for elegance */
+      }
+
+      /* Subsection Styling: Problem Statements & Solutions */
+      .project-insights-container h6.problem-statements-title {
+        font-size: 2.8rem;
+        font-weight: bold;
+        text-align: center;
+        font-family: 'Roboto Slab', serif;
+        color: #16f706; /* Darker blue for emphasis */
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+      }
+
+      /* Subsection Styling: Insights */
+      .project-insights-container .mt-3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #004085 !important; /* Navy color for distinct subheadings */
+        font-family: 'Roboto Slab', serif;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #004085; /* Thin underline for structure */
+        display: inline-block;
+        padding-bottom: 5px;
+      }        
+        /* Styling for "tools used" header */
+        .modal .col-md-6 .mt-3 {
+          font-size: 1.2rem;                /* Larger font size for prominence */
+          font-weight: normal;                /* Bold text for emphasis */
+          text-align: left;
+          color: #0f0f01;                   /* Dark color for readability */
+          border-bottom: none;
+
+        }
+
+        /* Additional styling specifically for the "Live Dashboard" header */
+        .modal .mt-3 {
+          font-size: 1.5rem;                /* Larger font size for prominence */
+          text-align: left;
+          color: black;                   /* Dark color for readability */
+          
+        }
+
+        .custom-heading {
+            font-size: 1.1rem; /* Adjusted font size for better visibility */
+            color: black; /* Dark slate blue color */
+            padding: 10px; /* Adds some space inside the heading area */
+            border-left: 5px solid #e74c3c; /* A red accent border on the left */
+            border-radius: 4px; /* Rounds the edges */
+        }
+
+        /* Styling for Project Details Section */
+        .project-details {
+            padding: 10px;
+        }
+
+        .details-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .details-text {
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+
+        /* Styling for Tool Cards */
+        .tool-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .tool-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            width: 150px;
+            height: 50px;
+            background-color: #f8f9fa;
+            border: 1px solid black;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .tool-name {
+            font-size: 1rem;
+            color: #050ebc;
+            font-weight: bold;
+        }
+
+
+        
+        /* Certificates Section Styling */
+        #certificates {
+          background-color: #f9f9f9;
+          padding: 40px 0;
+        }
+
+        #certificates h2 {
+          text-align: center;
+          font-size: 2rem;
+          margin-bottom: 10px;
+          color: black;
+          font-weight: bold;
+          padding: 40px 10px;
+          
+        }
+
+
+        /* Certificate Card */
+        .certificate-card {
+          border: none;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .certificate-card:hover {
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Certificate Image Container */
+        .certificate-image-container {
+          overflow: hidden;
+          border-radius: 8px; /* Rounded corners for the image */
+          position: relative;
+        }
+
+        .certificate-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          transition: transform 0.3s ease; /* Zoom effect on hover */
+        }
+
+        .certificate-image-container:hover .certificate-image {
+          transform: scale(1.1); /* Zoom in the image */
+        }
+
+        /* Card Title */
+        .card-title {
+          font-size: 1.1rem;
+          font-weight: bold;
+          color: #333;
+          width: 100%;
+          height: 18px;
+        }
+
+        /* Contact Me Section Styling */
+        #contact {
+            font-size: 1.2rem;
+            background-color: white;
+            color: white;
+        }
+
+        #contact h2 {
+          text-align: center;
+          font-size: 3rem;
+          margin-bottom: 10px;
+          color: black;
+          font-weight: normal;
+          padding: 40px 10px;
+          
+        }
+
+        #contact h4 {
+          text-align: center;
+          font-size: 2.2rem;
+          margin-bottom: 10px;
+          color: black;
+          font-weight: normal;          
+        }
+
+        .btn-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: #bdc8d3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .btn-circle:hover {
+            background-color: black;
+            transform: scale(1.1);
+        }
+
+        .social-icon {
+            width: 35px;
+            height: 35px;
+        }
+
+
+
+        /* Social Media Label */
+        .text-center p {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: black;
+            margin-top: 8px;
+            text-align: center;
+        }
+
+          .contact-options {
+              gap: 20px; /* Space between the cards */
+              flex-wrap: wrap;
+          }
+
+          .contact-card {
+              background-color: white; /* Dark gray for card background */
+              color: black; /* Light text color */
+              border: #000;
+              border-color: 1px solid black;
+              border-radius: 10px; /* Rounded corners */
+              padding: 20px; /* Inner padding */
+              flex: 1 1 calc(45% - 20px); /* Responsive sizing */
+              max-width: 300px; /* Optional: Restrict width */
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+
+          .contact-card:hover {
+              color: white;
+              border: #000;
+              background-color: rgb(90, 87, 87);
+              transform: translateY(-5px); /* Lift effect on hover */
+              box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow */
+              object-fit: cover;
+          }
+
+          .contact-icon {
+              width: 50px; /* Icon size */
+              height: 50px;
+              object-fit: cover; /* Ensure proper scaling of images */
+              border-radius: 50%; /* Optional: Make icons circular */
+              padding: 10px;
+              margin-bottom: 10px; /* Space below the icon */
+          }
+
+          .social-icon:hover {
+              transform: scale(1.1); /* Slight zoom effect */
+          }
+
+          .contact-card h5 {
+              font-size: 1.2rem;
+              font-weight: bold;
+              margin-top: 10px;
+              margin-bottom: 5px;
+          }
+
+          .contact-card p {
+              font-size: 1rem;
+              margin-bottom: 0; /* Remove extra spacing */
+          }
+
+
+          .contact-card a {
+              text-decoration: none; /* Remove underline */
+          }
+
+          .contact-card a:hover {
+              text-decoration: none; /* Ensure underline stays removed on hover */
+          }
+
+          /* General Body Styling for Sticky Footer */
+          body {
+              display: flex;
+              flex-direction: column;
+              min-height: 100vh;
+              margin: 0; /* Removes default margin */
+          }
+
+          /* Unique Footer Styling */
+          .custom-footer {
+              background-color: black; /* Black background */
+              color: white; /* White text */
+              text-align: center; /* Centered text */
+              padding: 1rem 0; /* Padding for vertical spacing */
+              margin-top: auto; /* Pushes footer to the bottom */
+              font-family: 'Arial', sans-serif; /* Unique font for footer */
+              letter-spacing: 1px; /* Slightly spaced-out letters */
+              border-top: 5px solid #f05454; /* Unique border for styling */
+          }
+
+          .custom-footer p {
+              margin: 0; /* Removes default paragraph margin */
+              font-size: 1rem; /* Standard text size */
+              margin: 10px 0;
+          }
+
+
+
+          
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Denis's Portfolio</a>
+    <button 
+      class="navbar-toggler" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" 
+      aria-expanded="false" 
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#certificates">Certificates</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+<!-- Home Section Start -->
+<section id="home" class="home-section">
+  <div class="home-content">
+      <!-- Left Side: Profile Image -->
+      <div class="image-container">
+          <img src="images/about/Profile Picture.png" alt="Profile" class="about-img">
+      </div>
+
+      <!-- Right Side: Text Content -->
+      <div class="text-container">
+          <div class="text-left">
+            <h5>Hello, I'm</h5>
+          </div>
+          <h5 class="card-title">Denis M</h5>
+          <div class="card-body">
+              <h5>Data Analyst</h5>
+          </div>
+
+          <!-- Social Media Icons -->
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/denis07" target="_blank">
+              <img src="icons/linkedin-2.png" alt="LinkedIn">
+            </a>
+
+              <a href="mailto:denism1729@gmail.com"  target="_blank">
+                <img src="icons/mail.png" alt="Gmail">
+            </a>
+            </a>
+            <a href="https://github.com/DenisM03" target="_blank">
+                <img src="icons/github.png" alt="GitHub">
+            </a>                         
+          </div>
+
+          <!-- Download Resume Section -->
+          <div class="d-flex justify-content-left mt-4">
+            <div class="resume-container p-3 text-center">
+              <a href="Images/About/Denis_M_Data_Analyst.pdf" class="btn btn-primary px-4 py-2" download>
+                <i class="fas fa-download me-2"></i>Download Resume
+              </a>
+            </div>
+          </div>
+
+
+
+      </div>
+  </div>
+</section>
+<!-- Home Section End -->
+  
+<!-- About Section Start -->
+
+<section id="about" class="about-section">  &nbsp; 
+  <h2 class="mb-4"><b>About Me</b></h2>
+  
+  <!-- Education Container -->
+  <div class="education-container">
+      <h3 class="education-title">Education</h3>
+      
+      <div class="education-details">
+          <h4 class="course-name">Master of Science in Mathematics</h4>
+          <p class="university-name">JSS Science and Technology University Mysore</p>
+          <p class="course-year">2022 - 2024</p>
+      </div>
+  </div>
+
+  <div class="about-text">
+    <p>As a dedicated data professional with hands-on experience from my project work and advanced training through the<b> IBM Data Analyst Professional Certificate</b>, I have developed core skills in <b>Excel, SQL, Python, and Power BI</b>. My projects, provided practical experience working with diverse datasets, enabling me to build impactful dashboards and uncover actionable insights.</p>
+    <p>Through real-world challenges, I have honed my expertise in <b>data cleaning, analysis, visualization, and storytelling</b>. My ability to leverage tools like SQL and Power BI ensures that I transform complex data into meaningful narratives that drive strategic decision-making and operational improvements.</p>
+    <p>I am passionate about turning data into a powerful asset for businesses, always striving to provide accurate, insightful, and efficient solutions that enable informed decision-making.</p>
+
+  </div>
+  </div>
+</section>
+
+<!-- About Section End -->
+
+
+<!-- Skills Section Start -->
+
+<section id="skills" class="skills-section"> &nbsp;
+  <div class="container">
+    <h2 class="text-center mb-5">Skills</h2>
+    <div class="row justify-content-center">
+
+      <!-- Skill 1 Card -->
+      <div class="col-md-2 col-sm-6 mb-4">
+        <div class="skill-card">
+          <h5 class="skill-title">MS Excel</h5>
+        </div>
+      </div>
+
+      <!-- Skill  Card -->      
+      <div class="col-md-2 col-sm-6 mb-4">
+        <div class="skill-card">
+          <h5 class="skill-title">Python</h5>
+        </div>
+      </div>
+
+      <!-- Skill  Card -->      
+      <div class="col-md-2 col-sm-6 mb-4">
+        <div class="skill-card">
+          <h5 class="skill-title">SQL</h5>
+        </div>
+      </div>
+
+      <!-- Skill  Card -->      
+      <div class="col-md-2 col-sm-6 mb-4">
+        <div class="skill-card">
+          <h5 class="skill-title">Power Bi</h5>
+        </div>
+      </div>
+
+      <!-- Skill  Card -->      
+      <div class="col-md-2 col-sm-6 mb-4">
+        <div class="skill-card">
+          <h5 class="skill-title">DAX</h5>
+        </div>
+      </div>
+
+
+
+
+      <!-- Skill  Card -->      
+      <div class="col-md-2 col-sm-6 mb-4">
+        <div class="skill-card">
+          <h5 class="skill-title">Analytical Thinking</h5>
+        </div>
+      </div>
+
+
+
+      <!-- Skill  Card -->      
+      <div class="col-md-2 col-sm-6 mb-4">
+        <div class="skill-card">
+          <h5 class="skill-title">PowerPoint</h5>
+        </div>
+      </div>  
+      
+      <!-- Skill  Card -->      
+      <div class="col-md-2 col-sm-6 mb-4">
+        <div class="skill-card">
+          <h5 class="skill-title">Tableau Public</h5>
+        </div>
+      </div>
+
+      <!-- Skill  Card -->      
+      <div class="col-md-2 col-sm-6 mb-4">
+        <div class="skill-card">
+          <h5 class="skill-title">Azure</h5>
+        </div>
+      </div>  
+       
+      <!-- Skill Card -->      
+      <div class="col-md-2 col-sm-6 mb-4">
+        <div class="skill-card">
+          <h5 class="skill-title">Storytelling</h5>
+        </div>
+      </div>      
+
+      <!-- Skill  Card -->      
+      <div class="col-md-2 col-sm-6 mb-4">
+        <div class="skill-card">
+          <h5 class="skill-title">Attention to Detail</h5>
+        </div>
+      </div>      
+
+    
+            
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section End -->
+
+
+<!-- Projects Section Start -->
+<section id="projects" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5"><strong>Projects</strong></h2>
+    <div class="row justify-content-center">
+      
+<!-- Project 1 Card -->
+<div class="col-md-4 mb-4">
+  <div class="card h-100 ">
+    <img src="images/projects/Consumer goods Ad-hoc insights/Consumer goods Ad-hoc insights.png" class="card-img-top" alt="Project 1">
+    <div class="card-body">
+      <h5 class="card-title"><strong>Consumer Goods Ad-hoc Insights</strong></h5>
+      <!-- Card Text with Tool Icon -->
+      <p class="card-text">
+        <strong>
+          <span class="domain-label">Domain:</span> 
+          <span class="domain-value">Consumer Goods</span>
+        </strong> 
+      </p>
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-primary" onclick="openProjectModal('projectModal1')">View Project</button>
+      <img src="images/skills/sql-2.png" alt="SQL" style="width: 40px; height: 40px; margin-left: 80px;">
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Modal for Project -->
+<div class="modal fade" id="projectModal1" tabindex="-1" aria-labelledby="projectModalLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Consumer Goods Ad-hoc Insights</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <!-- Project Details Section-->
+          <div class="col-md-6">
+            <h6><strong>Project Details</strong></h6>
+            <p>Delivered valuable insights to Atliq Hardware, a leading computer hardware producer, based on Ad-hoc business requests. Empowering swift, informed, data-driven decisions for success.</p>
+            
+            <!-- Problem Statement -->
+            <p><strong>Project Overview</strong></p>
+            <p>This project involved analyzing data for Atliq Hardware, a fictional leader in the computer hardware industry, to address 10 ad-hoc business queries. The goal was to provide data-driven insights that could assist management in strategic decision-making within the consumer goods domain. </p>
+            
+            <!-- Task -->
+            <p><strong>Task :</strong></p>
+            <p>I presented insights on 10 Ad-hoc Business requests provided by the client.</p>
+
+            <!-- Business Focus: -->      
+            <p><strong>Business Focus :</strong></p>                 
+            <p>Analyzed critical metrics like Gross Profit, Average Manufacturing Cost, and regional sales performance.
+            Proposed strategies to enhance production rates and profitability, such as discounts.</p>
+
+            <!-- Technical Approach: -->
+            <p><strong>Technical Approach :</strong></p>         
+            <p>Utilized MySQL for advanced SQL operations, including Joins, Common Table Expressions (CTEs), Subqueries.
+            Created reports and visualizations using Excel and Power Bi to effectively communicate findings.</p>
+
+            <!-- Results -->
+            <p><strong>Results :</strong></p>              
+            <p>Generated actionable insights on top-performing markets, customer segments, and product lines.
+            Delivered strategic recommendations to management for data-driven decision-making.</p>
+
+            <!-- Tools Used -->
+            <h6 class="mt-3"><strong>Tools Used</strong></h6>
+            <div class="tool-cards">
+              <div class="card tool-card">
+                <p class="tool-name">MySQL</p>
+            </div>              
+                <div class="card tool-card">
+                    <p class="tool-name">SQL</p>
+                </div>
+                <div class="card tool-card">
+                    <p class="tool-name">Power Bi</p>
+                </div>
+                <div class="card tool-card">
+                  <p class="tool-name">Powerpoint</p>
+              </div>                
+                <!-- Add more tool cards as needed -->
+            </div>
+            
+          </div>
+
+          
+          <div class="col-md-6">
+            <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/projects/Consumer goods Ad-hoc insights/Sales trend.png" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/projects/Consumer goods Ad-hoc insights/Sales by Channel.png" class="d-block w-100" alt="Slide 2">
+                </div>     
+                <div class="carousel-item">
+                  <img src="images/projects/Consumer goods Ad-hoc insights/Product segment sales.png" class="d-block w-100" alt="Slide 2">
+                </div>                              
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="https://github.com/DenisM03/Sql__Project--Consumer__Goods__Ad-hoc__Insights"
+             target="_blank" class="btn btn-custom">View Project on GitHub</a>
+          
+          <a href="https://drive.google.com/file/d/1cng0qwFlIsHxXaBmitdxYqSiOaAeWDHR/view?usp=sharing" 
+             target="_blank" class="btn btn-custom btn-custom-info">View Project PPT</a>
+          
+          <a href="https://github.com/DenisM03/Sql__Project--Consumer__Goods__Ad-hoc__Insights/blob/main/SQL_Codes_Consumer_Goods_Ad_Hoc_Insights.sql"
+             target="_blank" class="btn btn-custom btn-custom-secondary">View Project Code</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Project 2 Card -->
+<div class="col-md-4 mb-4">
+  <div class="card h-100">
+    <img src="images/projects/Pizza Runner Business Analysis/Pizza Runner Business Analysis.png" class="card-img-top" alt="Project 2">
+    <div class="card-body">
+      <h5 class="card-title"><strong>Pizza Runner Business Analysis</strong></h5>
+      <!-- Card Text with Tool Icon -->
+      <p class="card-text">
+        <strong>
+          <span class="domain-label">Domain:</span> 
+          <span class="domain-value">Business</span>
+        </strong> 
+      </p>
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-primary" onclick="openProjectModal('projectModal2')">View Project</button>
+      <img src="images/skills/sql-2.png" alt="SQL" style="width: 40px; height: 40px; margin-left: 80px;">
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Modal for Project 3-->
+<div class="modal fade" id="projectModal2" tabindex="-1" aria-labelledby="projectModalLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Pizza Runner Business Analysis</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <!-- Project Details Section-->
+          <div class="col-md-6">
+            <h6><strong>Project Details</strong></h6>
+            <p>Provided actionable insights to Pizza Runner, to expand the Pizza business. Empowered the company to optimize operations through improved delivery service, enhancing customer satisfaction. This case study highlights how SQL-based analysis can drive operational improvements and business efficiency.</p>
+            
+            <!-- Problem Statement -->
+            <p><strong>Problem Overview</strong></p>
+            <p>This project examines the operations of Pizza Runner, a pizza delivery service. The objective was to evaluate customer ordering behaviors, runner performance, and operational efficiency to derive insights for business improvements.</p>
+
+            <!--Key Analyses: -->
+            <p><strong>Key Analyses :</strong></p>
+
+            <ol>
+              <li>Customer Insights:</li>
+              <ul>
+                <li>Evaluated ordering preferences (e.g., exclusions, extras, and pizza types like Meatlovers and Vegetarian).</li>
+                <li>Identified trends in customization levels.</li>
+              </ul>
+                        
+              <li>Runner Performance:</li>
+              <ul>
+                <li>Measured delivery success rates and time efficiency.</li>
+                <li>Analyzed delivery completion times to find areas of improvement.</li>
+              </ul>
+
+              <li>Operational Metrics:</li>
+              <ul>
+                <li>Examined the highest number of pizzas delivered in a single order.</li>
+                <li>Analyzed the impact of high customization orders on delivery performance.</li>
+              </ul>              
+                          
+            </ol>
+            
+            <!-- Result -->
+            <p><strong>Outcomes :</strong></p>
+            <p>The project provided actionable insights, including:</p>
+              <ul></ul>
+              <li>Popularity trends between pizza types and customizations.</li>
+              <li>Runners' operational efficiency and potential bottlenecks in delivery.</li>
+              <li>Key areas where service improvements could be implemented to enhance overall business performance.</li>
+
+            <!-- Tools Used -->
+            <h6 class="mt-3"><strong>Tools Used</strong></h6>
+            <div class="tool-cards">
+                <div class="card tool-card">
+                    <p class="tool-name">MySQL</p>
+                </div>
+                <div class="card tool-card">
+                    <p class="tool-name">SQL</p>
+                </div>
+                <div class="card tool-card">
+                  <p class="tool-name">PowerPoint</p>
+              </div>                
+                <!-- Add more tool cards as needed -->
+            </div>
+
+          </div>
+          <div class="col-md-6">
+            <div id="projectCarousel2" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/projects/Pizza Runner Business Analysis/task 7.png" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/projects/Pizza Runner Business Analysis/Task D2.png" class="d-block w-100" alt="Slide 2">
+                </div>                
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel2" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="https://github.com/DenisM03/8-Week-SQL-Challenge-Case-Studies/tree/main/Week2--Pizza_Runner_Analysis"
+             target="_blank" class="btn btn-custom">View Project on GitHub</a>
+          
+          <a href="https://drive.google.com/file/d/133og-5FAPuZJw-7f6LU-04h1kDk9i5KJ/view?usp=sharing"
+             target="_blank" class="btn btn-custom btn-custom-info">View Project PPT</a>
+          
+          <a href=https://github.com/DenisM03/8-Week-SQL-Challenge-Case-Studies/blob/main/Week2--Pizza_Runner_Analysis/Sql%20Codes%20Pizza%20Runner%20Business%20Analysis.sql
+             target="_blank" class="btn btn-custom btn-custom-secondary">View Project Code</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Project 8 Card -->
+<div class="col-md-4 mb-4">
+  <div class="card h-100">
+    <img src="images/projects/Goodcabs Performance Analysis/Goodcabs Performance Analysis.png" class="card-img-top" alt="Project 8">
+    <div class="card-body">
+      <h5 class="card-title"><strong>Goodcabs Performance Analysis</strong></h5>
+      <!-- Card Text with Tool Icon -->
+      <p class="card-text">
+        <strong>
+          <span class="domain-label">Domain:</span> 
+          <span class="domain-value">Transportation & Mobility</span>
+        </strong> 
+      </p>
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-primary" onclick="openProjectModal('projectModal8')">View Project</button>
+      <img src="images/skills/sql-2.png" alt="SQL" style="width: 40px; height: 40px; margin-left: 80px;">
+      <span class="icon-separator">+</span>
+      <img src="images/skills/Power-Bi-Logo-PNG-Photos.png" alt="Power BI" style="width: 40px; height: 40px;">
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Modal for Project 3-->
+<div class="modal fade" id="projectModal8" tabindex="-1" aria-labelledby="projectModalLabel8" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Goodcabs Performance Analysis</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <!-- Project Details Section-->
+          <div class="col-md-6">
+            <h6><strong>Project Details</strong></h6>
+            <p>Conducted a comprehensive performance analysis for Goodcabs, focusing on key metrics. Using SQL and Power BI, delivered ad-hoc requests, an interactive dashboard, and actionable insights highlighting factors influencing repeat passenger rates, demand patterns, and emerging mobility trends. The outcome included strategic recommendations to optimize pricing, improve service quality, and explore EV integration, driving operational efficiency and customer loyalty. 
+            </p>
+            
+            <!-- Project Summary -->
+            <p><strong>Project Summary</strong></p>
+            <p> Goodcabs, a cab service company established two years ago, is currently operational in 10 tier 2 cities in India. To drive growth and improve passenger satisfaction, Goodcabs has set ambitious performance targets for 2024. The Goodcabs management team aims to assess the company’s performance using key metrics.</p>
+
+            <p>I was tasked with addressing ad-hoc requests and developing an interactive dashboard that could analyze key metrics like trip volume, passenger satisfaction, repeat passenger rate, trip distribution, and the balance between new and repeat passengers.</p>
+            <p>Developed SQL queries to address ad-hoc business requests.</p>
+            <p>Using Power BI, I developed a “Goodcabs Performance Analysis” dashboard, integrating trips and target data. The dashboard featured a revenue overview, trip distribution, Passenger performance, demand analysis, and target achievement analysis.</p>
+            <p>The insights and recommendations provide a strategic roadmap for enhancing repeat passenger rates, optimizing demand during tourism and business peaks, and adopting emerging mobility trends, such as EV integration. These insights aim to boost customer satisfaction, operational efficiency, and revenue growth while positioning Goodcabs as a market leader in tier-2 cities.</p>
+
+
+
+            <!-- Tools Used -->
+            <h6 class="mt-3"><strong>Tools Used</strong></h6>
+            <div class="tool-cards">
+                <div class="card tool-card">
+                    <p class="tool-name">MySQL</p>
+                </div>
+                <div class="card tool-card">
+                    <p class="tool-name">SQL</p>
+                </div>
+                <div class="card tool-card">
+                  <p class="tool-name">DAX</p>
+              </div>  
+              <div class="card tool-card">
+                <p class="tool-name">Power Bi</p>
+            </div>                             
+                <!-- Add more tool cards as needed -->
+            </div>            
+
+          </div>
+          <div class="col-md-6">
+            <div id="projectCarousel8" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/projects/Goodcabs Performance Analysis/Data Model.png" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/projects/Goodcabs Performance Analysis/Avg.Fare.png" class="d-block w-100" alt="Slide 2">
+                </div>     
+                <div class="carousel-item">
+                  <img src="images/projects/Goodcabs Performance Analysis/Avg.ratings.png" class="d-block w-100" alt="Slide 3">
+                </div>  
+                <div class="carousel-item">
+                  <img src="images/projects/Goodcabs Performance Analysis/Trips.png" class="d-block w-100" alt="Slide 4">
+                </div>  
+                <div class="carousel-item">
+                  <img src="images/projects/Goodcabs Performance Analysis/Trips by city.png" class="d-block w-100" alt="Slide 5">
+                </div> 
+                <div class="carousel-item">
+                  <img src="images/projects/Goodcabs Performance Analysis/Target Acheivement.png" class="d-block w-100" alt="Slide 6">
+                </div>              
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel8" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel8" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="https://github.com/DenisM03/Goodcabs_Performance_Analysis" 
+             target="_blank" class="btn btn-custom">View Project on GitHub</a>
+          
+          <a href="https://drive.google.com/file/d/1MqB6vA_5xYW8M6kPHuYVk1Fc-KzE_wEf/view?usp=sharing" 
+             target="_blank" class="btn btn-custom btn-custom-info">View Project Insights PPT</a>
+          
+          <a href="https://drive.google.com/file/d/1FGzxfDj8HOPd78n81gOAO2KzBgyRkjNy/view?usp=sharing" 
+             target="_blank" class="btn btn-custom btn-custom-secondary">View Ad-hoc Reports</a>
+        </div>
+
+        <!-- Live Dashboard Section -->
+        <h6 class="mt-4">Live Dashboard</h6>
+        <iframe src="https://app.powerbi.com/view?r=eyJrIjoiM2E0NzkxNDQtNDNjYS00ZGY2LTg5NzktYzc1ZTBiOTFlMWUyIiwidCI6IjUxNjk4MzNiLWUxZWItNDlkNC1iODBiLWM0MTNjOTMxMWZkYSJ9" width="100%" height="720px" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Project 3 Card -->
+<div class="col-md-4 mb-4">
+  <div class="card h-100">
+    <img src="images/projects/Sales Analysis/Sales Analysis.png" class="card-img-top" alt="Project 3">
+    <div class="card-body">
+      <h5 class="card-title"><strong>Sales Analysis</strong></h5>
+      <!-- Card Text with Tool Icon -->
+      <p class="card-text">
+        <strong>
+          <span class="domain-label">Domain:</span> 
+          <span class="domain-value">Sales</span>
+        </strong> 
+      </p>
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-primary" onclick="openProjectModal('projectModal3')">View Project</button>
+      <img src="images/skills/sql-2.png" alt="SQL" style="width: 40px; height: 40px; margin-left: 80px;">
+      <span class="icon-separator">+</span>
+      <img src="images/skills/Power-Bi-Logo-PNG-Photos.png" alt="Power BI" style="width: 40px; height: 40px;">
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Modal for Project 3-->
+<div class="modal fade" id="projectModal3" tabindex="-1" aria-labelledby="projectModalLabel3" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Sales Analysis</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <!-- Project Details Section-->
+          <div class="col-md-6">
+            <h6><strong>Project Details</strong></h6>
+            <p>Analyzed sales orders to provide insights on Market and Product performance,Customer analysis,Cost-Profitibility of Products  and  insights on Revenue and Profit trends and also automated the process to reduce manual data collection time. Presented a Power BI dashboard to track market performance and profit trends.</p>
+            
+            <!-- Project Summary -->
+            <p><strong>Project Overview</strong></p>
+            <p> This project involves leveraging Power BI to analyze e-commerce sales data, addressing challenges faced by a sales company in extracting actionable insights from sales and marketing data. Traditionally, the process of gathering, cleaning, and analyzing data from Sales and Marketing teams was time-intensive and inefficient. To streamline this, an ETL data pipeline was developed to ingest and store data in a MySQL database. The processed data was imported into Power BI for comprehensive analysis.</p>
+
+            <p>The project includes an interactive dashboard that provides insights into key areas such as Market Trends, Sales Performance, Product Analysis, and Cost-Profitability. The dashboard features dynamic visualizations, including cards, bar charts, line graphs, enabling users to drill down into metrics using slicers and filters. This empowers decision-makers to explore the data intuitively and identify actionable opportunities.</p>
+            
+            <!-- Result -->
+            <p><strong>Outcome :</strong></p>
+            <p>The project provides comprehensive insights into sales trends, highlights high-performing products and regions, and enables businesses to optimize inventory and marketing strategies.
+            </p>
+
+            <!-- Tools Used -->
+            <h6 class="mt-3"><strong>Tools Used</strong></h6>
+            <div class="tool-cards">
+                <div class="card tool-card">
+                    <p class="tool-name">MySQL</p>
+                </div>
+                <div class="card tool-card">
+                    <p class="tool-name">SQL</p>
+                </div>
+                <div class="card tool-card">
+                  <p class="tool-name">Power Bi</p>
+              </div>  
+              <div class="card tool-card">
+                <p class="tool-name">DAX</p>
+            </div>                             
+                <!-- Add more tool cards as needed -->
+            </div>            
+
+          </div>
+          <div class="col-md-6">
+            <div id="projectCarousel3" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/projects/Sales Analysis/Market Analysis.png" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/projects/Sales Analysis/Data Model.png" class="d-block w-100" alt="Slide 2">
+                </div>                
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel3" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel3" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="https://github.com/DenisM03/PowerBI_Project--Sales_Analysis" 
+             target="_blank" class="btn btn-custom">View Project on GitHub</a>
+          
+          <a href="https://drive.google.com/file/d/1jSyJ5YEixGQqzfM-I3vmWgGiwfgKAZop/view?usp=sharing" 
+             target="_blank" class="btn btn-custom btn-custom-info">View Project PPT</a>
+          
+          <a href="https://github.com/DenisM03/Sql__Project--Consumer__Goods__Ad-hoc__Insights/blob/main/SQL_Codes_Consumer_Goods_Ad_Hoc_Insights.sql" 
+             target="_blank" class="btn btn-custom btn-custom-secondary">View Project Code</a>
+        </div>
+
+        <!-- Live Dashboard Section -->
+        <h6 class="mt-4">Live Dashboard</h6>
+        <iframe src="https://app.powerbi.com/view?r=eyJrIjoiOTdiZDM5ZGItNTNjZC00MzMzLWFmZjAtYzM5MWU3NTg4ODYxIiwidCI6IjUxNjk4MzNiLWUxZWItNDlkNC1iODBiLWM0MTNjOTMxMWZkYSJ9" width="100%" height="720px" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Project 4 Card -->
+<div class="col-md-4 mb-4">
+  <div class="card h-100">
+    <img src="images/projects/Atliq Mart Supply Chain Analysis/Atliq Mart Supply Chain Analysis.png" class="card-img-top" alt="Project 4">
+    <div class="card-body">
+      <h5 class="card-title"><strong>Atliq Mart Supply Chain Analysis</strong></h5>
+      <!-- Card Text with Tool Icon -->
+      <p class="card-text">
+        <strong>
+          <span class="domain-label">Domain:</span> 
+          <span class="domain-value">FMCG</span>
+        </strong> 
+      </p>
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-primary" onclick="openProjectModal('projectModal4')">View Project</button>
+      <img src="images/skills/Power-Bi-Logo-PNG-Photos.png" alt="Power BI" style="width: 40px; height: 40px;">
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Modal for Project 3-->
+<div class="modal fade" id="projectModal4" tabindex="-1" aria-labelledby="projectModalLabel4" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Atliq Mart Supply Chain Analysis</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <!-- Project Details Section-->
+          <div class="col-md-6">
+            <h6><strong>Project Details</strong></h6>
+            <p>Designed a dashboard to measure the customer service level of AtliQ Mart ,who is a growing FMCG manufacturer headquartered in Gujarat,facing a problem, where few key customers experiencing supply chain issues.</p>
+            
+            <!-- Problem Statement -->
+            <p><strong>Project Overview</strong></p>
+            <p>This project focuses on analyzing the supply chain performance of AtliQ Mart, a growing FMCG company based in Gujarat, India. The company faced challenges with some key customers not renewing contracts due to service issues like delayed or incomplete deliveries. The objective was to track and improve service levels using three key metrics:</p>
+              <ul>
+                <li> On-Time Delivery (OT%)</li>
+                <li>In-Full Delivery (IF%)</li>
+                <li>On-Time In-Full Delivery (OTIF%)</li>
+              </ul>
+            <!-- Objective -->
+            <p><strong>Objective</strong></p>
+            <p>Develop a Power BI dashboard to monitor daily service performance, identify trends, and enable the supply chain team to respond proactively to issues. The analysis supports AtliQ Mart’s goal of resolving service challenges before expanding to Tier 1 cities.</p>
+            
+            <!-- Key Features of the Dashboard-->
+            <p><strong>Key Features of the Dashboard</strong></p>
+            <ol>
+              <li><b>KPI Performance Overview:</b> Tracks OT%, IF%, and OTIF% against targets.</li>
+              <li><b>Customer Analysis:</b> Provides insights into customer-specific performance with visualizations.</li>
+              <li><b>Product-Level Insights:</b> Focuses on fill rate performance by product categories.</li>
+              <li><b>Trend Analysis:</b> Tracks KPIs over time, enabling management to pinpoint issues.</li>
+              <li><b>Lead Time Analysis:</b> Analyzes average delivery delays across cities and customers.</li>
+            </ol
+
+                    
+            # -- Outcomes-->
+            <p><strong>Outcomes</strong></p>
+            <p>The project identified that KPI performance, particularly OT%, IF%, and OTIF%, was below target. It also highlighted product categories and customers requiring improvement, providing actionable insights to enhance supply chain efficiency.</p>
+            <p>This project demonstrates expertise in supply chain analytics, Power BI dashboarding, and KPI tracking, showcasing the ability to deliver actionable business insights​.</p>
+
+            <!-- Tools Used -->
+            <h6 class="mt-3"><strong>Tools Used</strong></h6>
+            <div class="tool-cards">
+                <div class="card tool-card">
+                  <p class="tool-name">Power Bi</p>
+              </div>  
+              <div class="card tool-card">
+                <p class="tool-name">DAX</p>
+            </div>                             
+                <!-- Add more tool cards as needed -->
+            </div>   
+
+          </div>
+          <div class="col-md-6">
+            <div id="projectCarousel4" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/projects/Atliq Mart Supply Chain Analysis/Data Model.png" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/projects/Atliq Mart Supply Chain Analysis/Dashboard.png" class="d-block w-100" alt="Slide 2">
+                </div>     
+                <div class="carousel-item">
+                  <img src="images/projects/Atliq Mart Supply Chain Analysis/Metrics.png" class="d-block w-100" alt="Slide 2">
+                </div>                           
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel4" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel4" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="https://github.com/DenisM03/ATLIQ__MART__SUPPLY__CHAIN__ANALYSIS"
+             target="_blank" class="btn btn-custom">View Project on GitHub</a>
+          
+        </div>
+
+        <!-- Live Dashboard Section -->
+        <h6 class="mt-4">Live Dashboard</h6>
+        <iframe src="https://app.powerbi.com/view?r=eyJrIjoiMjc5MGY2NjMtZTU0YS00N2JjLWJlNmMtOTI5MDVlYmU0MzlkIiwidCI6IjUxNjk4MzNiLWUxZWItNDlkNC1iODBiLWM0MTNjOTMxMWZkYSJ9"   width="100%" height="720px" frameborder="0"></iframe>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Project 7 Card -->
+<div class="col-md-4 mb-4">
+  <div class="card h-100">
+    <img src="images/Projects/CodeX Market Analysis/CodeX Market Analysis.png" class="card-img-top" alt="Project 7">
+    <div class="card-body">
+      <h5 class="card-title"><strong>CodeX Market Analysis</strong></h5>
+      <!-- Card Text with Tool Icon -->
+      <p class="card-text">
+        <strong>
+          <span class="domain-label">Domain:</span> 
+          <span class="domain-value">Food and Beverage</span>
+        </strong> 
+      </p>
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-primary" onclick="openProjectModal('projectModal7')">View Project</button>
+      <img src="images/skills/Python.png" alt="MySQL" style="width: 40px; height: 40px; margin-left: 80px;">
+
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Modal for Project 7-->
+<!-- Bootstrap Modal for Project -->
+<div class="modal fade" id="projectModal7" tabindex="-1" aria-labelledby="projectModalLabel3" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">CodeX Market Analysis</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <!-- Project Details Section-->
+          <div class="col-md-6">
+            <h6><strong>Project Details</strong></h6>
+            <p>Leveraged 10,000 survey responses to uncover actionable insights for CodeX’s marketing strategy using tools and libraries like Python and Jupyter Notebooks. Conducted exploratory data analysis to identify consumer behavior patterns, market trends, and growth opportunities. Delivered data-driven recommendations for regional expansion, pricing optimization, and product design refinement. Enhanced business decisions through  compelling visuals and in-depth competitor analysis.            </p>
+            
+            
+            <!-- Problem Statement -->
+            <p><strong>About CodeX</strong></p>
+            <p>CodeX is a German beverage company that is aiming to make its mark in the Indian market. A few months ago, they launched their energy drink in 10 cities in India.</p>
+            <p>Their Marketing team is responsible for increasing brand awareness, market share, and product development. They conducted a survey in those 10 cities and received results from 10k respondents.</p>
+            <p>The marketing team wants a data analyst to convert these survey results to meaningful insights which the team can use to drive actions.</p>
+            
+            <!-- Client -->
+            <p><strong>Tasks</strong></p>
+            <ul>
+              <li>Answer the Primary_Secondary_Insights questions by analyzing the data provided.</li>
+              <li>Provide meaningful recommendations from the data</li>
+            </ul>
+            
+            
+             <!-- Tools Used -->
+            <h6 class="mt-3"><strong>Tools Used</strong></h6>
+            <div class="tool-cards">
+              <div class="card tool-card">
+                <p class="tool-name">Python</p>
+              </div>
+              <div class="card tool-card">
+                <p class="tool-name">Jupyter Notbook</p>
+              </div>              
+              <div class="card tool-card">
+                <p class="tool-name">Pandas</p>
+              </div>
+              <div class="card tool-card">
+                <p class="tool-name">Matplotlib</p>
+              </div>  
+              <div class="card tool-card">
+                <p class="tool-name">Seaborn</p>
+              </div>      
+              <div class="card tool-card">
+                <p class="tool-name">PowerPoint</p>
+              </div>                        
+            </div>   
+          </div>
+
+          <!-- Carousel Section -->
+          <div class="col-md-6">
+            <div id="projectCarousel7" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/projects/CodeX Market Analysis/Gender preference.png" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Projects/CodeX Market Analysis/market preference.png" class="d-block w-100" alt="Slide 2">
+                </div>     
+                <div class="carousel-item">
+                  <img src="images/projects/CodeX Market Analysis/Organic.png" class="d-block w-100" alt="Slide 3">
+                </div>    
+                <div class="carousel-item">
+                  <img src="images/projects/CodeX Market Analysis/Heatmap.png" class="d-block w-100" alt="Slide 4">
+                </div>                  
+                <div class="carousel-item">
+                  <img src="images/projects/CodeX Market Analysis/consumption frequency.png" class="d-block w-100" alt="Slide 5">
+                </div>                   
+                <div class="carousel-item">
+                  <img src="images/projects/CodeX Market Analysis/packaging preference.png" class="d-block w-100" alt="Slide 6">
+                </div>   
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel7" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel7" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Buttons -->
+        <div class="text-center mt-4">
+          <a href="https://github.com/DenisM03/CodeX_Market_Analysis"
+             target="_blank" class="btn btn-custom">View Project on GitHub</a>
+          <a href="https://drive.google.com/file/d/1GX2SqqHLdu3_xFsWyyd8-LB8smqU4xEK/view?usp=drive_link"
+             target="_blank" class="btn btn-custom btn-custom-info">View Project PPT</a>
+          <a href="https://github.com/DenisM03/CodeX_Market_Analysis/blob/main/CodeX%20Market%20Analysis.ipynb"
+             target="_blank" class="btn btn-custom btn-custom-secondary">View Project Code</a>
+        </div>        
+
+        <!-- New Section: Project Insights -->
+        <hr class="my-4">
+        <div class="project-insights-container">
+          <h6 class="project-insights-title"><strong>Project Insights</strong></h6>
+
+          <!-- Problem Statements & Solutions -->
+          <h6 class="problem-statements-title"><strong>Primary Insights</strong></h6>
+          <p> </p>
+
+
+          <!-- Insights -->
+          <h6 class="mt-3"><strong>Demographic Insights</strong></h6>
+            <h6 class="custom-heading"><strong>a. Who prefers energy drink more? (male/female/non-binary?)</strong></h6>
+          <ul>
+                <li>Majority of consumers are Male.</li>
+                <li>60.38% of energy drink consumers are male, 34.55% are female, and the remaining are non-binary.</li>         </ul>
+
+          <h6 class="custom-heading"><strong>b. Which age group prefers energy drinks more?</strong></h6>
+          <ul>
+                <li>Age group between  19-30  prefers energy drinks more.</li>
+                <li> 55.20% of consumers are between 19-30,23.76% of consumers are between 31-45,14.88% of consumers are between 15-18,4.26% of consumers are between 46-65 and remaing are 65+ age group.</li>
+         </ul>
+
+         <h6 class="custom-heading"><strong>c. Which type of marketing reaches the most Youth (15-30)?</strong></h6>
+         <ul>
+               <li>Online ads and TV commercials  reaches the most Youth (15-30).</li>
+               <li> Marketting channel preference of youth:</li>
+               <ul>
+                  <li>Online ads: 48.13%</li>
+                  <li>TV commercials: 25.47%</li>
+                  <li>Other: 10.02%</li>
+                  <li>Outdoor billboards: 10.02%</li>
+                  <li>Print media: 6.36%</li>
+               </ul>
+        </ul>
+
+        <!-- Consumer Preferences -->
+        <h6 class="mt-3"><strong>Consumer Preferences</strong></h6>
+
+        <h6 class="custom-heading"><strong>a. What are the preferred ingredients of energy drinks among respondents?</strong></h6>
+        <ul>
+            <li>Caffeine and Vitamins are the preferred ingredients of energy drinks among respondents.</li>
+            <li>38.96% prefer Caffeine, and 25.34% prefer Vitamins.</li>
+        </ul>
+
+        <h6 class="custom-heading"><strong>b. What packaging preferences do respondents have for energy drinks?</strong></h6>
+        <ul>
+            <li>Compact and portable cans and innovative bottle designs are preferred by respondents.</li>
+            <li>39.84% prefer compact cans, and 30.47% prefer innovative bottle designs.</li>
+        </ul>
+
+        <!-- Competition Analysis -->
+        <h6 class="mt-3"><strong>Competition Analysis</strong></h6>
+
+        <h6 class="custom-heading"><strong>a. Who are the current market leaders?</strong></h6>
+        <ul>
+            <li>Cola-Coka, Bepsi, and Gangster are the top 3 current market leaders.</li>
+            <li>They occupy 65.04% of the market among respondents.</li>
+        </ul>
+
+        <h6 class="custom-heading"><strong>b. What are the primary reasons consumers prefer those brands over ours?</strong></h6>
+        <ul>
+            <li>Brand reputation, taste/flavor preference, and availability are the primary reasons.</li>
+            <li>26.53% of respondents chose brand reputation, 20.28% chose taste/flavor preference, and 17.43% chose availability.</li>
+        </ul>
+
+        <!-- Marketing Channels and Brand Awareness -->
+        <h6 class="mt-3"><strong>Marketing Channels and Brand Awareness</strong></h6>
+
+        <h6 class="custom-heading"><strong>a. Which marketing channel can be used to reach more customers?</strong></h6>
+        <ul>
+            <li>Online ads reach 40.20% of customers, and TV commercials reach 26.88% of customers.</li>
+        </ul>
+
+        <h6 class="custom-heading"><strong>b. How effective are different marketing strategies and channels in reaching our customers?</strong></h6>
+        <ul>
+            <li>1,805 respondents heard through online ads, and 1,257 through TV commercials.</li>
+            <li>Overall, 44.47% of respondents heard about energy drinks through marketing channels.</li>
+        </ul>
+
+        <!-- Brand Penetration -->
+        <h6 class="mt-3"><strong>Brand Penetration</strong></h6>
+
+        <h6 class="custom-heading"><strong>a. What do people think about brands? (overall rating)</strong></h6>
+        <ul>
+            <li>59.74% of respondents have a neutral perception of brands, 22.57% have a positive perception, and 17.69% have a negative perception.</li>
+        </ul>
+
+        <h6 class="custom-heading"><strong>b. Which cities do we need to focus more on?</strong></h6>
+        <ul>
+            <li>Bangalore, Hyderabad, Mumbai, Chennai, and Pune.</li>
+        </ul>
+
+        <!-- Purchase Behavior -->
+        <h6 class="mt-3"><strong>Purchase Behavior</strong></h6>
+
+        <h6 class="custom-heading"><strong>a. Where do respondents prefer to purchase energy drinks?</strong></h6>
+        <ul>
+            <li>44.94% of respondents prefer purchasing from supermarkets, 25.50% from online retailers, and 14.64% from local stores.</li>
+        </ul>
+
+        <h6 class="custom-heading"><strong>b. What are the typical consumption situations for energy drinks among respondents?</strong></h6>
+        <ul>
+            <li>Respondents consume energy drinks during sports/exercise, studying/working late, and social outings/parties.</li>
+            <li>44.94% consume energy drinks during sports/exercise.</li>
+        </ul>
+
+        <h6 class="custom-heading"><strong>c. What factors influence respondents' purchase decisions, such as price range and limited edition packaging?</strong></h6>
+        <ul>
+            <li>42.88% of consumers prefer energy drinks priced between 50-99.</li>
+            <li>39.46% are interested in limited edition packaging.</li>
+            <li>Overall, price range influences more consumers.</li>
+        </ul>
+
+          <!-- Problem Statements & Solutions -->
+          <h6 class="problem-statements-title"><strong>Secondary Insights</strong></h6>
+          <p> </p>
+          
+          <h6 class="mt-3"><strong>Consumer Behavior & Market Segmentation</strong></h6>
+
+          <h6 class="custom-heading"><strong>1. What are the key demographics (age, gender, city, city tier) of frequent consumers?</strong></h6>
+          <ul>
+              <li>736 consumers aged 19-30 consume energy drinks on a daily basis.</li>
+              <li>Male consumers prefer daily consumption.</li>
+              <li>Chennai, Bangalore, and Delhi markets have daily customers.</li>
+              <li>Tier 1 city consumers are the most frequent among respondents.</li>
+          </ul>
+
+          <h6 class="custom-heading"><strong>2. How does consumption frequency vary across city tiers?</strong></h6>
+          <ul>
+              <li>In Tier 1 cities:
+                  <ul>
+                      <li>27.43% consume 2-3 times a week.</li>
+                      <li>13.89% consume rarely.</li>
+                      <li>12.56% consume 2-3 times a month.</li>
+                  </ul>
+              </li>
+              <li>In Tier 2 cities:
+                  <ul>
+                      <li>7% consume 2-3 times a week.</li>
+                      <li>5.541% consume rarely.</li>
+                      <li>3.57% consume 2-3 times a month.</li>
+                  </ul>
+              </li>
+              <li>Consumption is higher in Tier 1 cities.</li>
+          </ul>
+
+          <h6 class="custom-heading"><strong>3. What are the most common consumption times and situations?</strong></h6>
+          <ul>
+              <li>34.09% consume to stay awake during work/study.</li>
+              <li>31.48% consume before exercise.</li>
+              <li>14.48% consume throughout the day.</li>
+          </ul>
+
+          <h6 class="custom-heading"><strong>4. Which marketing channels resonate best with different demographics?</strong></h6>
+          <ul>
+              <li><strong>Age group:</strong>
+                  <ul>
+                      <li>15-18 and 19-30 age groups resonate most with online ads.</li>
+                      <li>Other age groups resonate more with TV commercials.</li>
+                  </ul>
+              </li>
+              <li><strong>Gender:</strong>
+                  <ul>
+                      <li>Male and female consumers prefer online ads.</li>
+                      <li>Non-binary consumers resonate with TV commercials.</li>
+                  </ul>
+              </li>
+              <li><strong>City:</strong>
+                  <ul>
+                      <li>Bangalore, Hyderabad, Kolkata, and Chennai resonate with online ads.</li>
+                      <li>Ahmedabad, Delhi, Jaipur, Lucknow, Mumbai, and Pune resonate with TV commercials.</li>
+                  </ul>
+              </li>
+              <li><strong>City tier:</strong>
+                  <ul>
+                      <li>Tier 1 cities prefer online ads.</li>
+                      <li>Tier 2 cities prefer TV commercials.</li>
+                  </ul>
+              </li>
+          </ul>
+
+          <h6 class="custom-heading"><strong>5. Is there a correlation between health concerns and consumption frequency?</strong></h6>
+          <ul>
+              <li>No strong correlation exists between health concerns and consumption frequency.</li>
+          </ul>
+
+          <!-- Regional Strategy and Expansion Opportunities -->
+          <h6 class="mt-3"><strong>Regional Strategy and Expansion Opportunities</strong></h6>
+
+          <h6 class="custom-heading"><strong>6. Which regions show the highest interest in organic or natural energy drinks?</strong></h6>
+          <ul>
+              <li>Bangalore, Hyderabad, Mumbai, and Chennai show the highest interest.</li>
+              <li>Lucknow, Jaipur, and Delhi show the least interest.</li>
+          </ul>
+
+          <h6 class="custom-heading"><strong>7. Are there underserved regions where brand awareness is low but interest in energy drinks is high?</strong></h6>
+          <ul>
+              <li>Bangalore, Hyderabad, Chennai, and Kolkata need more brand awareness.</li>
+          </ul>
+
+          <!-- Brand Perception & Product Offering -->
+          <h6 class="mt-3"><strong>Brand Perception & Product Offering</strong></h6>
+
+          <h6 class="custom-heading"><strong>8. What factors drive positive brand perception, and how do they vary by demographic?</strong></h6>
+          <ul>
+              <li>Brand reputation and taste/flavor preference drive positive perception.</li>
+          </ul>
+
+          <h6 class="custom-heading"><strong>9. What are the key reasons preventing people from trying the product?</strong></h6>
+          <ul>
+              <li>24.31%: Product not available locally.</li>
+              <li>22.58%: Health concerns.</li>
+              <li>21.93%: Not interested in energy drinks.</li>
+          </ul>
+
+          <h6 class="custom-heading"><strong>10. Which ingredients and health concerns matter most to consumers?</strong></h6>
+          <ul>
+              <li>39% are concerned about caffeine, and 25% are concerned about vitamins.</li>
+          </ul>
+
+          <h6 class="custom-heading"><strong>11. What improvements are consumers looking for in existing products?</strong></h6>
+          <ul>
+              <li>30%: Reduction of sugar content.</li>
+              <li>25%: More natural ingredients.</li>
+              <li>20%: Wider range of flavors.</li>
+          </ul>
+
+          <h6 class="custom-heading"><strong>12. How do perceptions and experiences with taste impact purchases?</strong></h6>
+          <ul>
+              <li>29.57% rated taste 3, 24.79% rated taste 4.</li>
+              <li>70% of ratings are between 3-5.</li>
+          </ul>
+
+          <h6 class="custom-heading"><strong>13. Packaging preference of consumers for daily consumption?</strong></h6>
+          <ul>
+              <li>41.82% prefer compact and portable cans.</li>
+              <li>28.30% prefer innovative bottle designs.</li>
+          </ul>
+
+          <h6 class="custom-heading"><strong>14. What trade-offs are consumers willing to make between price, health benefits, and taste?</strong></h6>
+          <ul>
+              <li>No significant trade-offs were found.</li>
+          </ul>
+
+          <!-- Competitor Analysis & Brand Switching -->
+          <h6 class="mt-3"><strong>Competitor Analysis & Brand Switching</strong></h6>
+
+          <h6 class="custom-heading"><strong>15. Which brands are currently preferred, and why?</strong></h6>
+          <ul>
+              <li>Bepsi, Blue Bull, CodeX, and Cola-Coka are the most preferred brands.</li>
+              <li>Brand reputation is the primary reason for their preference.</li>
+          </ul>
+
+          <!-- Product Packaging & Pricing Strategy -->
+          <h6 class="mt-3"><strong>Product Packaging & Pricing Strategy</strong></h6>
+
+          <h6 class="custom-heading"><strong>16. How do packaging preferences differ across demographics and regions?</strong></h6>
+          <ul>
+              <li><strong>Age group:</strong> All prefer compact and portable cans, followed by innovative bottle designs.</li>
+              <li><strong>Gender:</strong> All genders prefer compact and portable cans, followed by innovative bottle designs.</li>
+              <li><strong>City:</strong> All cities follow the same preference.</li>
+          </ul>
+
+          <h6 class="custom-heading"><strong>17. Is there significant interest in limited-edition packaging?</strong></h6>
+          <ul>
+              <li>40.23% are not interested.</li>
+              <li>39.46% are interested.</li>
+              <li>20.31% are not sure.</li>
+          </ul>
+
+          <!-- Sales & Distribution Optimization -->
+          <h6 class="mt-3"><strong>Sales & Distribution Optimization</strong></h6>
+
+          <h6 class="custom-heading"><strong>18. Which purchase locations are most popular across regions?</strong></h6>
+          <ul>
+              <li>Supermarkets are the most popular, followed by online retailers and gyms/fitness centers.</li>
+          </ul>
+
+          <h6 class="custom-heading"><strong>19. How does the interest in organic or natural products vary across demographics?</strong></h6>
+          <ul>
+              <li><strong>Age group:</strong> Consumers aged 19-30 and 31-45 show the most interest.</li>
+              <li><strong>Gender:</strong> Male consumers show the most interest.</li>
+              <li><strong>City:</strong> Bangalore, Hyderabad, Mumbai, Chennai, and Pune are most interested.</li>
+              <li><strong>City tier:</strong> Tier 1 cities show the most interest.</li>
+          </ul>
+
+          <h6 class="custom-heading"><strong>20. Are there correlations between marketing channels and purchase behavior?</strong></h6>
+          <ul>
+              <li>A significant association exists between marketing channels and purchase behavior.</li>
+          </ul>
+
+          <h6 class="custom-heading"><strong>21. How does brand awareness ("heard before") impact trial rates and perception?</strong></h6>
+          <ul>
+              <li>58% have a neutral perception, 24% have a positive perception, and 18% have a negative perception.</li>
+          </ul>
+
+          <h6 class="custom-heading"><strong>22. What are the most common consumption barriers, and how can they be addressed?</strong></h6>
+          <ul>
+              <li>Not available locally is the primary reason.</li>
+              <li>Many are not interested in energy drinks.</li>
+              <li>Health concerns
+          </ul>      
+
+          <h6 class="custom-heading"><strong>23.How does the perception of sustainability (e.g., eco-friendly packaging) affect brand preference?</strong></h6>
+          <ul>
+              <li>Among customers who prefer eco-friendly packaging are opting for brands like Cola-Coka,Bepsi, Gangster, Bull-Bull and CodeX.</li>
+          </ul>    
+
+          <h6 class="problem-statements-title"><strong>Recommendations</strong></h6>
+          <p> </p>
+
+
+          <!-- Insights -->
+          <h6 class="mt-3"><strong>Demographic Insights</strong></h6>
+
+        <h6 class="custom-heading"><strong>1. What immediate improvements can we bring to the product?</strong></h6>
+        <ul>
+            <li><strong>Reduce Sugar Content:</strong> 30% of consumers prefer products with lower sugar levels. Reducing sugar can address this preference.</li>
+            <li><strong>Include Natural Ingredients:</strong> Adding more natural ingredients appeals to 25% of consumers. Highlighting organic elements can improve brand perception.</li>
+            <li><strong>Expand Flavor Options:</strong> Introduce a wider range of flavors, as 20% of consumers desire more variety.</li>
+            <li><strong>Eco-Friendly Packaging:</strong> Many customers prefer sustainable packaging. Transitioning to eco-friendly options can attract environmentally conscious consumers.</li>
+        </ul>
+
+        <h6 class="custom-heading"><strong>2. What should be the ideal price of our product?</strong></h6>
+        <ul>
+            <li><strong>Competitor Benchmarking:</strong> Align pricing with preferred competitors like Bepsi, Blue Bull, and CodeX, emphasizing comparable or superior value.</li>
+            <li><strong>Tier-Based Pricing:</strong>
+                <ul>
+                    <li><strong>Tier 1 Cities:</strong> Premium pricing due to higher consumption and brand awareness.</li>
+                    <li><strong>Tier 2 Cities:</strong> Slightly lower pricing to attract price-sensitive consumers.</li>
+                </ul>
+            </li>
+            <li><strong>Bundle Offers:</strong> Provide family packs or "buy two, get one free" deals to encourage bulk purchases.</li>
+        </ul>
+
+        <h6 class="custom-heading"><strong>3. What kind of marketing campaigns, offers, and discounts can we run?</strong></h6>
+        <ul>
+            <li><strong>Campaign Themes:</strong>
+                <ul>
+                    <li><strong>Health-Oriented:</strong> Promote natural ingredients, reduced sugar, and vitamins as selling points.</li>
+                    <li><strong>Lifestyle-Based:</strong> Target segments like fitness enthusiasts ("Fuel Your Workout") and students/professionals ("Stay Awake, Stay Ahead").</li>
+                </ul>
+            </li>
+            <li><strong>Channel-Specific Campaigns:</strong>
+                <ul>
+                    <li><strong>Online Ads:</strong> Focus on age groups 15-30, leveraging social media platforms like Instagram, Facebook, and YouTube.</li>
+                    <li><strong>TV Commercials:</strong> Target Tier 2 cities and older demographics.</li>
+                </ul>
+            </li>
+            <li><strong>Discount Offers:</strong> "First-Time Buyer Discounts" to encourage trials and "Subscribe and Save" plans for regular consumers.</li>
+            <li><strong>Seasonal Promotions:</strong> Introduce limited-edition flavors or packaging during festivals or fitness seasons.</li>
+        </ul>
+
+        <h6 class="custom-heading"><strong>4. Who can be a brand ambassador, and why?</strong></h6>
+        <ul>
+            <li><strong>Virat Kohli:</strong> Known for his relentless energy and peak fitness, Virat represents passion and perseverance, making him an ideal ambassador to resonate with a younger, health-conscious audience.</li>
+            <li><strong>Dwayne 'The Rock' Johnson:</strong> A global icon of strength and motivation, The Rock’s universal appeal and dynamic personality can captivate audiences worldwide, amplifying the energy drink’s brand presence online.</li>
+            <li><strong>Neeraj Chopra:</strong> As India’s Olympic gold medalist and a symbol of determination and athletic excellence, Neeraj embodies the energy and persistence that aligns perfectly with a high-performance energy drink's brand identity.</li>
+            <li><strong>PV Sindhu:</strong> Her success on the global stage and relentless stamina make her an aspirational figure, appealing to fitness enthusiasts and young achievers seeking sustained energy and focus.</li>
+        </ul>
+
+        <h6 class="custom-heading"><strong>5. Who should be our target audience, and why?</strong></h6>
+        <ul>
+            <li><strong>Primary Audience:</strong>
+                <ul>
+                    <li><strong>Age Group:</strong> 19-30 years old, as they are the most frequent consumers.</li>
+                    <li><strong>Gender:</strong> Male consumers slightly dominate the daily consumption segment.</li>
+                    <li><strong>City Tier:</strong> Focus on Tier 1 cities (e.g., Bangalore, Chennai, and Delhi), where demand and frequency are highest.</li>
+                </ul>
+            </li>
+            <li><strong>Secondary Audience:</strong>
+                <ul>
+                    <li><strong>Age Group:</strong> 15-18: This segment resonates strongly with online ads and is likely to adopt energy drinks for activities like studying and exercising.</li>
+                    <li><strong>Fitness Enthusiasts:</strong> 31.48% of consumption is linked to pre-exercise energy needs, making gyms and fitness centers key channels for engagement.</li>
+                </ul>
+            </li>
+        </ul>
+
+
+              </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Project 5 Card -->
+<div class="col-md-4 mb-4">
+  <div class="card h-100">
+    <img src="images/projects/Covid-19-Analysis/Covid-19.png" class="card-img-top" alt="Project 5">
+    <div class="card-body">
+      <h5 class="card-title"><strong>Covid-19-Analysis</strong></h5>
+      <!-- Card Text with Tool Icon -->
+      <p class="card-text">
+        <strong>
+          <span class="domain-label">Domain:</span> 
+          <span class="domain-value">Health Care</span>
+        </strong> 
+      </p>
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-primary" onclick="openProjectModal('projectModal5')">View Project</button>
+      <img src="images/skills/sql-2.png" alt="Power BI" style="width: 40px; height: 40px;">
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Modal for Project 3-->
+<div class="modal fade" id="projectModal5" tabindex="-1" aria-labelledby="projectModalLabel5" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Covid-19-Analysis</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <!-- Project Details Section-->
+          <div class="col-md-6">
+            <h6><strong>Project Details</strong></h6>
+            <p>Performed in-depth analysis of global Covid-19 data using SQL to track infection rates, vaccination trends, and mortality across countries.</p>
+            
+            <!--Project Overview -->
+            <p><strong>Project Overview</strong></p>
+            <p>This project utilizes SQL to analyze global COVID-19 data to uncover insights into case trends, death rates, infection percentage, and fatality rates. The analysis focuses on identifying patterns, regional disparities, and the effectiveness of health measures.</p>
+
+            <!--Key Analyses: -->
+            <p><strong>Key Analyses :</strong></p>
+
+            <ol>
+              <li>Trend Analysis:</li>
+              <ul>
+                <li>Tracked the  increase in confirmed cases, and deaths.</li>
+                <li>Analyzed trends over months and years to identify surges and declines.</li>
+                
+              </ul>
+                        
+              <li>Regional Insights:</li>
+              <ul>
+                <li>Compared cases, positive rate, and fatality rates across continents and countries.</li>
+                <li>Highlighted countries with the highest recovery and fatality rates.</li>
+                <li>Evaluated the deaths per continents and identified the locations with highest deaths, high infection rates and infected population count. </li>
+              </ul>
+
+              <li>Vaccination Analysis:</li>
+              <ul>
+                <li>Evaluated the correlation between vaccination rates and declining case numbers.li>
+                <li>Assessed regional progress in achieving vaccination targets.</li>
+                <li>Evaluated the vaccinations rates across continents and countries, and identified the top 10 Countries with Highest Vaccination Count per Population</li>
+              </ul>              
+                          
+            </ol>
+            
+            <!-- Result -->
+            <p><strong>Outcomes :</strong></p>
+            <p>The project provided insights into the pandemic's spread, helping to identify regions requiring additional support and intervention. It also demonstrated the importance of vaccinations in reducing the severity and spread of the virus.</p>
+
+            <!-- Tools Used -->
+            <h6 class="mt-3"><strong>Tools Used</strong></h6>
+            <div class="tool-cards">
+                <div class="card tool-card">
+                    <p class="tool-name">MySQL</p>
+                </div>
+                <div class="card tool-card">
+                    <p class="tool-name">SQL</p>
+                </div>
+              <div class="card tool-card">
+                <p class="tool-name">Tableau Public</p>
+            </div>                             
+                <!-- Add more tool cards as needed -->
+            </div>   
+
+            
+          </div>
+          <div class="col-md-6">
+            <div id="projectCarousel5" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/projects/Covid-19-Analysis/Deaths.png" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/projects/Covid-19-Analysis/Top 10 countries.png" class="d-block w-100" alt="Slide 2">
+                </div>     
+              <div class="carousel-item">
+                <img src="images/projects/Covid-19-Analysis/Vaccination.png" class="d-block w-100" alt="Slide 2">
+              </div>                           
+            </div>              
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel5" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel5" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="https://github.com/DenisM03/Sql__Project--Covid-19-Analysis/blob/main/SQL_Code--Covid-19_Analysis.sql"
+             target="_blank" class="btn btn-custom">View Project on GitHub</a>
+          
+          <a href="https://drive.google.com/file/d/1ImUCtzSqlj81-woilfDm3ZDnhUkeGZpC/view?usp=sharing" 
+            target="_blank" class="btn btn-custom btn-custom-info">View Project PPT</a>
+          
+
+          <a href="https://public.tableau.com/app/profile/denis.m1517/viz/Covid_deaths_17210421943350/DeathsReport"
+            target="_blank" class="btn btn-custom btn-custom-secondary2">View Dashboard in Tableau Public</a>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Project 6 Card -->
+<div class="col-md-4 mb-4">
+  <div class="card h-100">
+    <img src="images/projects/Superstore Sales Analysis/Superstore Sales Analysis.png" class="card-img-top" alt="Project 6">
+    <div class="card-body">
+      <h5 class="card-title"><strong>Superstore Sales Analysis</strong></h5>
+      <!-- Card Text with Tool Icon -->
+      <p class="card-text">
+        <strong>
+          <span class="domain-label">Domain:</span> 
+          <span class="domain-value">Retail Sales</span>
+        </strong> 
+      </p>
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-primary" onclick="openProjectModal('projectModal6')">View Project</button>
+      <img src="images/skills/Microsoft_Excel.png" alt="Power BI" style="width: 80px; height: 60px;">
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Modal for Project 3-->
+<div class="modal fade" id="projectModal6" tabindex="-1" aria-labelledby="projectModalLabel6" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Superstore Sales Analysis</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <!-- Project Details Section-->
+          <div class="col-md-6">
+            <h6><strong>Project Details</strong></h6>
+            <p></p>
+            
+            <!--Project Overview -->
+            <p><strong>Project Overview</strong></p>
+            <p>The Superstore Sales Analysis project involved leveraging Microsoft Excel to analyze sales data from a retail store, uncovering valuable insights to support strategic decision-making and drive business growth. The project focused on exploring various aspects of sales performance, such as revenue trends, product profitability, and customer segmentation.</p>
+
+            <!--Key Analyses: -->
+            <p><strong>Key Analyses :</strong></p>
+
+            <ol>
+              <li>Analysis with Pivot Tables : </li>
+              <ul>
+                <li>Conducted in-depth analysis to identify sales patterns, top-performing products, and customer preferences.</li>
+                
+              </ul>
+                        
+              <li>Dashboard Creation :</li>
+              <ul>
+                <li>Designed a visually appealing Excel dashboard with charts, graphs, and slicers to present findings interactively. Key metrics included sales, profit margins, and region-wise performance.</li>              </ul>
+             
+                          
+            </ol>
+            <!-- Tools Used -->
+            <h6 class="mt-3"><strong>Tools Used</strong></h6>
+            <div class="tool-cards">
+                <div class="card tool-card">
+                    <p class="tool-name">MS Excel</p>
+                </div>
+                <div class="card tool-card">
+                  <p class="tool-name">Power Pivot</p>
+              </div>
+              <div class="card tool-card">
+                <p class="tool-name">DAX</p>
+            </div>                              
+            </div>   
+            
+          </div>
+          <div class="col-md-6">
+            <div id="projectCarousel6" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/projects/Superstore Sales Analysis/Dashboard.png" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item active">
+                  <img src="images/projects/Superstore Sales Analysis/Sales Trend.png" class="d-block w-100" alt="Slide 1">
+                </div>                
+                <div class="carousel-item">
+                  <img src="images/projects/Superstore Sales Analysis/Sales by segment.png" class="d-block w-100" alt="Slide 2">
+                </div>   
+                <div class="carousel-item">
+                  <img src="images/projects/Superstore Sales Analysis/Sales by Ship mode.png" class="d-block w-100" alt="Slide 2">
+                </div>                               
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel6" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel6" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="https://github.com/DenisM03/Excel_Project--Superstore_Sales_Analysis"
+             target="_blank" class="btn btn-custom">View Project on GitHub</a>
+                     
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+
+</div>
+</div>
+</section>
+
+<!-- Projects Section End -->
+
+          
+ 
+<!-- Certificates Section -->
+<section id="certificates" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5"><strong>Awards & Certificates</strong></h2>
+    <div class="row justify-content-center">
+      
+      <!-- Certificate 1 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card certificate-card">
+          <div class="certificate-image-container">
+            <img src="images/certificates/IBM Data Analyst Professional Certificate.png" class="card-img-top certificate-image" alt="IBM Certificate">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">IBM Data Analyst Professional Certificate</h5>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Certificate 2 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card certificate-card">
+          <div class="certificate-image-container">
+            <img src="images/certificates/Excel basics for data analysis.png" class="card-img-top certificate-image" alt="Certificate 2">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Excel basics for data analysis</h5>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Certificate 3 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card certificate-card">
+          <div class="certificate-image-container">
+            <img src="images/certificates/Data Visualization and Dashboards with Excel and Cognos.png" class="card-img-top certificate-image" alt="Certificate 3">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Data Visualization and Dashboards with Excel and Cognos</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certificate 4 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card certificate-card">
+          <div class="certificate-image-container">
+            <img src="images/certificates/Databases and SQL for Data Science with Python.png" class="card-img-top certificate-image" alt="Certificate 3">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Databases and SQL for Data Science with Python</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certificate 5 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card certificate-card">
+          <div class="certificate-image-container">
+            <img src="images/certificates/Python for Data Science AI & Development.png" class="card-img-top certificate-image" alt="Certificate 3">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Python for Data Science AI & Development</h5>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Certificate 6 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card certificate-card">
+          <div class="certificate-image-container">
+            <img src="images/certificates/Data Analysis With Python.png" class="card-img-top certificate-image" alt="Certificate 3">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Data Analysis With Python</h5>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Certificate 7 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card certificate-card">
+          <div class="certificate-image-container">
+            <img src="images/certificates/Data Visualization with Python.png" class="card-img-top certificate-image" alt="Certificate 3">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Data Visualization with Python</h5>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!-- Certificate 8 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card certificate-card">
+          <div class="certificate-image-container">
+            <img src="images/certificates/Data Analytics Essentials.png" class="card-img-top certificate-image" alt="Certificate 3">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Data Analytics Essentials</h5>
+          </div>
+        </div>
+      </div>        
+
+      <!-- Certificate 8 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card certificate-card">
+          <div class="certificate-image-container">
+            <img src="images/certificates/BCGX  Data Science Job Simulation.png" class="card-img-top certificate-image" alt="Certificate 3">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">BCGX Data	Science	Job	Simulation</h5>
+          </div>
+        </div>
+      </div>   
+
+
+    </div>
+  </div>
+</section>
+            
+<section id="contact" class="py-5" style="background-color: white; color: black;">
+    <div class="container text-center">
+        <!-- Section Heading -->
+        <h2 class="mb-5"><b>Contact Me</b></h2>
+
+        <!-- Contact Options -->
+        <div class="contact-options d-flex flex-wrap justify-content-center">
+            <!-- Email Container -->
+            <div class="contact-card text-center">
+                <div class="d-flex align-items-center justify-content-center">
+                    <img src="icons/mail-2.png" alt="Email Icon" class="contact-icon">
+                    <h5 class="ms-3">Email Me</h5>
+                </div>
+                <p><a href="mailto:denism1729@gmail.com" target="_blank"  style="color: inherit;">denism1729@gmail.com</a></p>
+            </div>
+
+            <!-- Phone Container -->
+            <div class="contact-card text-center">
+                <div class="d-flex align-items-center justify-content-center">
+                    <img src="icons/call-icon.png" alt="Phone Icon" class="contact-icon">
+                    <h5 class="ms-3">Call Me</h5>
+                </div>
+                <p><a href="tel:+91 9480279198" target="_blank"  style="color: inherit;">+91 9480279198</a></p>
+            </div>
+
+            <!-- LinkedIn Container -->
+            <div class="contact-card text-center">
+                <div class="d-flex align-items-center justify-content-center">
+                    <img src="icons/linkedin-3.png" alt="LinkedIn Icon" class="contact-icon">
+                    <h5 class="ms-3">LinkedIn</h5>
+                </div>
+                <p><a href="https://www.linkedin.com/in/denis07" target="_blank" style="color: inherit;">www.linkedin.com/in/denis07</a></p>
+            </div>
+
+            <!-- GitHub Container -->
+            <div class="contact-card text-center">
+                <div class="d-flex align-items-center justify-content-center">
+                    <img src="icons/github.png" alt="GitHub Icon" class="contact-icon">
+                    <h5 class="ms-3">GitHub</h5>
+                </div>
+                <p><a href="https://github.com/DenisM03" target="_blank" style="color: inherit;">https://github.com/DenisM03</a></p>
+            </div>
+        </div>
+
+        <!-- Social Media Section -->
+        <h4 class="my-5"><b>Social Media</b></h4>
+        <div class="d-flex flex-wrap justify-content-center gap-4">
+
+        <!-- Tableau -->
+        <div class="text-center">
+          <a href="https://public.tableau.com/app/profile/denis.m1517/vizzes" target="_blank"  class="btn btn-circle btn-pink">
+              <img src="icons/Tableau-3.png" alt="Tableau" class="social-icon">
+          </a>
+          <p class="mt-2">Tableau</p>
+        </div>
+        <!-- Credly -->
+        <div class="text-center">
+          <a href="https://www.credly.com/users/denis-m/edit" target="_blank"  class="btn btn-circle btn-pink" >
+              <img src="icons/icons8-credly-80.png" alt="Credly" class="social-icon">
+          </a>
+          <p class="mt-2">Credly</p>
+        </div>
+        <!-- Leetcode -->
+        <div class="text-center">
+          <a href="https://leetcode.com/u/Denis_7/" target="_blank"  class="btn btn-circle btn-pink" >
+              <img src="icons/leetcode-2.png" alt="Leetcode" class="social-icon">
+          </a>
+          <p class="mt-2">Leetcode</p>
+        </div>
+        <!-- HackerRank -->
+        <div class="text-center">
+          <a href="https://www.hackerrank.com/profile/denism1729" target="_blank"  class="btn btn-circle btn-pink" >
+              <img src="icons/Hackerrank-2.png" alt="HackerRank" class="social-icon">
+          </a>
+          <p class="mt-2">HackerRank</p>
+        </div>
+
+        
+        
+    </div>
+</section>
+
+
+
+
+<!-- Make sure to initialize Bootstrap tooltips -->
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+</script>
+
+<!-- Your other content goes here -->
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="projectModalLabel">Project Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Your modal content here -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
+
+<!-- Bootstrap JS and Popper.js (required for modals) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+
+<!-- Bootstrap Icons CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<!-- Custom JavaScript -->
+<script>
+  // This function now accepts a specific modal ID as a parameter
+  function openProjectModal(modalId) {
+    var projectModal = new bootstrap.Modal(document.getElementById(modalId));
+    projectModal.show();
+  }
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (navbarCollapse.classList.contains('show')) {
+          new bootstrap.Collapse(navbarCollapse).hide();
+        }
+      });
+    });
+  });
+</script>
+
+
+<footer class="custom-footer">
+  <p>&copy; 2025 Denis M | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
